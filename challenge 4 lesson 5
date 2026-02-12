@@ -1,0 +1,11 @@
+jeson = {
+    "name": "squirtle",
+    "hp" : 40,
+    "is_starter" : true
+}
+
+dict = {
+    "name": "squirtle",
+    "hp" : 40,
+    "is_starter" : True
+}
