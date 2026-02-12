@@ -1,0 +1,51 @@
+# Simple Pokedex
+
+pokemon = {
+    "name": "Pikachu",
+    "type": "Electric",
+    "hp": 35
+}
+
+while True:
+    action = input("What would you like to do? (view, lookup, edit, add, quit): ").lower()
+
+    if action == "view":
+        print(pokemon)
+
+    elif action == "lookup":
+        stat = input("What stat do you want to see? > ").lower()
+        if stat in pokemon:
+            print(f"{pokemon['name']}'s {stat} is {pokemon[stat]}")
+        else:
+            print("Stat not found.")
+
+    elif action == "edit":
+        stat = input("What stat do you want to edit? > ").lower()
+        if stat in pokemon:
+            new_val = input(f"What is the new value for {stat}? > ")
+
+            # ubah ke int kalau stat hp
+            if stat == "hp":
+                new_val = int(new_val)
+
+            pokemon[stat] = new_val
+            print(f"{stat.capitalize()} has been updated to {new_val}.")
+        else:
+            print("Stat not found.")
+
+    elif action == "add":
+        key = input("Enter new stat name > ").lower()
+        val = input("Enter value > ")
+
+        if key == "hp":
+            val = int(val)
+
+        pokemon[key] = val
+        print(f"{key} added.")
+
+    elif action == "quit":
+        print("Goodbye!")
+        break
+
+    else:
+        print("Command not recognized.")
