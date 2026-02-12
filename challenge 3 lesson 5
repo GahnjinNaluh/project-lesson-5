@@ -1,0 +1,9 @@
+pedang ={
+    'name':'dragon spear',
+    'damage' : 40,
+    'rarity' : 'regular'
+}
+print(pedang)
+pedang['damage'] += 30
+pedang['rarity'] = 'super'
+print(pedang)
